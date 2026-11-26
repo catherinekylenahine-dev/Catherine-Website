@@ -1,0 +1,136 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="Images/jpg" href="shop.jpg">
+    <title>KYLES COFFEE SHOP| Coffee Shop</title>
+
+    <!-- CONNECT CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>☕ KYLES COFFEE SHOP</h1>
+    <p>SWEET, WARM, AND DELICIOUS.</p>
+    <div class="tagline">Your daily cup of happiness.</div>
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#coffee">Coffee</a>
+    <a href="#treats">Treats</a>
+    <a href="#order">My Order</a>
+    <a href="#history">Order History</a>
+</nav>
+
+<main id="home">
+
+    <section id="coffee">
+        <h2>☕ Our Coffee</h2>
+        <div class="menu-grid" id="coffee-menu"></div>
+    </section>
+
+    <section id="treats">
+        <h2>🍰 Delicious Treats</h2>
+        <div class="menu-grid" id="treats-menu"></div>
+    </section>
+
+    <section class="order" id="order">
+        <h2>🛒 Customer Shopping Cart</h2>
+
+        <div id="order-items">
+            <p>Nothing added yet.</p>
+        </div>
+
+        <div class="total">
+            Total: ₱<span id="total">0.00</span>
+        </div>
+
+        <button class="checkout" onclick="showCheckout()">
+            Proceed to Checkout
+        </button>
+    </section>
+
+    <section class="checkout-form" id="checkout-form">
+        <h2>📝 Customer Information</h2>
+
+        <form id="customer-form">
+
+            <label>Customer Name</label>
+            <input type="text" id="customer-name"
+            placeholder="Enter customer name" required>
+
+            <label>Contact Number</label>
+            <input type="tel" id="customer-phone"
+            placeholder="Enter contact number" required>
+
+            <label>Order Type</label>
+            <select id="order-type">
+                <option>Dine In</option>
+                <option>Take Out</option>
+            </select>
+
+            <label>Additional Notes</label>
+            <textarea id="notes" rows="3"
+            placeholder="Special instructions..."></textarea>
+
+            <button type="submit" class="checkout">
+                Place Customer Order
+            </button>
+
+        </form>
+    </section>
+
+    <section class="receipt" id="receipt">
+        <h2>☕ KYLES COFFEE SHOP</h2>
+        <h3>❤️ ORDER RECEIPT</h3>
+
+        <div id="receipt-content"></div>
+
+        <button onclick="window.print()">
+            🖨️ Print Receipt
+        </button>
+
+        <button class="new-customer"
+        onclick="startNewCustomer()">
+            ➕ New Customer Order
+        </button>
+    </section>
+
+    <section class="history" id="history">
+        <h2>📋 Customer Order History</h2>
+
+        <div id="history-count">
+            Total Completed Orders: 0
+        </div>
+
+        <br>
+
+        <div id="history-list">
+            No customer orders yet.
+        </div>
+
+        <button class="clear-history"
+        onclick="clearHistory()">
+            Clear Order History
+        </button>
+    </section>
+
+</main>
+
+<footer>
+    <h3>☕ KYLES COFFEE SHOP</h3>
+    <p>Open Daily · 7:00 AM – 6:00 PM</p>
+    <p>Thank you for visiting KYLES COFFEE SHOP! ❤️</p>
+    <p>© 2026 KYLES COFFEE SHOP. All Rights Reserved.</p>
+</footer>
+
+<!-- CONNECT JAVASCRIPT -->
+<script src="script.js"></script>
+
+</body>
+</html>
